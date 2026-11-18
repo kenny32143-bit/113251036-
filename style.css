@@ -1,0 +1,188 @@
+/* 整個網頁的基本設定 */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 24px 40px;
+    background-color: #f1f4f8;
+    color: #253349;
+    font-family: "Microsoft JhengHei", sans-serif;
+    line-height: 1.7;
+}
+
+/* 網站標題 */
+h1 {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 4px solid #3559a6;
+    color: #203b70;
+    font-size: 30px;
+}
+
+h2 {
+    margin-top: 32px;
+    font-size: 24px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #203b70;
+}
+
+/* 作者、編輯切換區 */
+nav {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+    background-color: #203b70;
+    border-radius: 10px;
+}
+
+nav button {
+    margin: 0;
+    background-color: #ffffff;
+    color: #203b70;
+}
+
+nav button:hover {
+    background-color: #e2eaff;
+}
+
+/* 所有按鈕 */
+button {
+    margin: 6px 4px 6px 0;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3559a6;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #244383;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #cf8500;
+    outline-offset: 3px;
+}
+
+/* 投稿表單 */
+#draft-form {
+    margin-bottom: 28px;
+    padding: 24px;
+    border: 1px solid #d5deeb;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgb(32 59 112 / 6%);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 11px;
+    border: 1px solid #acbcd2;
+    border-radius: 6px;
+    background-color: #fbfcfe;
+    color: #253349;
+    font: inherit;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#cancel-button {
+    border: 1px solid #acbcd2;
+    background-color: #edf1f7;
+    color: #344865;
+}
+
+#cancel-button:hover {
+    background-color: #dce4ef;
+}
+
+/* 稿件清單 */
+#draft-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#draft-list > li {
+    margin-bottom: 16px;
+    padding: 20px;
+    border: 1px solid #d5deeb;
+    border-left: 5px solid #3559a6;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow-wrap: anywhere;
+}
+
+/* 編輯查看全文 */
+details {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #dce4ef;
+}
+
+summary {
+    color: #244d98;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details p {
+    padding: 16px;
+    border-radius: 6px;
+    background-color: #f1f4f8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+#empty-message {
+    color: #586981;
+}
+
+/* 保留程式控制顯示、隱藏的功能 */
+[hidden] {
+    display: none !important;
+}
+
+/* 手機上的版面 */
+@media (max-width: 600px) {
+    body {
+        margin: 20px auto;
+        padding: 0 16px 24px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    #draft-form {
+        padding: 18px;
+    }
+
+    nav button {
+        flex: 1;
+    }
+}

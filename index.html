@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>投稿審查系統</title>
+    <!-- 加入這一行來連結 CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+<link rel="stylesheet" href="./style.css"></head>
+<body>
+    <h1>投稿審查系統</h1>
+
+    <nav>
+        <button id="author-button" type="button">作者</button>
+        <button id="editor-button" type="button">編輯</button>
+    </nav>
+
+    <h2 id="page-title">投稿清單</h2>
+
+    <form id="draft-form">
+        <h3 id="form-title">新增稿件</h3>
+        <p><label>類別 <input name="category" required></label></p>
+        <p><label>標題 <input name="title" required></label></p>                       
+        <p><label>文章內容<br><textarea name="content" rows="5" required></textarea></label></p>
+        <button type="submit">儲存草稿</button>
+        <button id="cancel-button" type="button" hidden>取消修改</button>
+    </form>
+
+    <p id="empty-message"></p>
+    <ul id="draft-list"></ul>
+</body>
+</html>
